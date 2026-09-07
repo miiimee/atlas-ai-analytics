@@ -6,7 +6,7 @@ import numpy as np
 import io
 
 app=FastAPI(title="AI Analytics Platform V2")
-app.add_middleware(CORSMiddleware, allow_origins=["http://localhost:5173"], allow_credentials=True, allow_methods=["*"], allow_headers=["*"])
+app.add_middleware(CORSMiddleware, allow_origins=["*"], allow_credentials=True, allow_methods=["*"], allow_headers=["*"])
 
 def load_df(f):
     data=f.file.read()
